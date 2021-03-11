@@ -1,0 +1,30 @@
+.tweetBox{
+  padding-bottom: 10px;
+  border-bottom: 8px solid var(--twitter-background);
+  padding-right: 10px;
+}
+
+.tweetBoxInput{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+}
+
+.tweetBoxInput input{
+  font-size: 20px;
+  border: none;
+}
+
+.tweetBoxButton {
+  background-color: var(--twitter-color) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  border-radius: 30px !important;
+  height: 50px !important;
+}
+
+.tweetBoxButton span{
+  padding: 0px 20px !important;
+}
