@@ -1,0 +1,9 @@
+.post {
+  display: grid;
+  grid-template-rows: 1fr 6fr;
+}
+
+.postBody{
+  display: flex;
+  flex-direction: column;
+}

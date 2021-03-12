@@ -7,18 +7,21 @@ import './Post.css';
 const Post = ({displayName, userName, verified, text, image, avatar}) => {
   return (
     <div className="post">
+
       <div className="postAvatar">
-        <Avatar></Avatar>
+        <Avatar src={image}></Avatar>
       </div>
+
       <div className="postBody">
         <div className="postHeader">
-          <VerifiedUser ></VerifiedUser>
+          <VerifiedUser></VerifiedUser>
         </div>
         <div className="postText">
 
         </div>
 
       </div>
+
     </div>
   )
 }

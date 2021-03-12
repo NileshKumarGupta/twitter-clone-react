@@ -4,10 +4,22 @@
   padding-right: 10px;
 }
 
-.tweetBoxInput{
-  padding: 20px;
+.tweetBox form{
   display: grid;
-  grid-template-columns: 1fr 8fr;
+  grid-template-columns: 1fr 6fr;
+}
+
+.tweetBoxAvatar{
+  padding: 30px;
+}
+
+.tweetBoxInput{
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+
+.tweetBoxInput *{
+  margin: 5px 0;
 }
 
 .tweetBoxInput input{
