@@ -1,27 +1,26 @@
-import { Avatar, Button } from '@material-ui/core';
-import React from 'react';
+import { Avatar, Button } from "@material-ui/core";
+import React from "react";
 
-import AvatarIcon from '../../Icons/avatar.png';
+import AvatarIcon from "../../Icons/avatar.png";
 
-import './TweetBox.css';
+import "./TweetBox.css";
 
 const TweetBox = () => {
-  return(
+  return (
     <div className="tweetBox">
       <form>
-        <div className="tweetBoxAvatar">
-          <Avatar src={AvatarIcon} variant="square"></Avatar>
-        </div>
         <div className="tweetBoxInput">
-          <input placeholder="What's Happening?" type="text"></input>
-          <input placeholder="Optional: Image URL" type="text"></input>
-          <div style={{textAlign: "right"}}>
-          <Button className="tweetBoxButton">Tweet</Button>
-          </div>
+          <Avatar></Avatar>
+          <input placeholder="What's Happening"></input>
         </div>
+        <input
+          className="tweetBoxInputImage"
+          placeholder="Optional: Enter Image URL"
+        ></input>
+        <Button className="tweetBoxButton">Tweet</Button>
       </form>
     </div>
   );
-}
+};
 
 export default TweetBox;

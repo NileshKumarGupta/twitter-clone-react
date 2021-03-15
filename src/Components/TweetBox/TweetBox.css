@@ -1,28 +1,22 @@
-.tweetBox{
+.tweetBox {
   padding-bottom: 10px;
   border-bottom: 8px solid var(--twitter-background);
   padding-right: 10px;
 }
 
-.tweetBox form{
-  display: grid;
-  grid-template-columns: 1fr 6fr;
+.tweetBox form {
+  display: flex;
+  flex-direction: column;
 }
 
-.tweetBoxAvatar{
-  padding: 30px;
+.tweetBoxInput {
+  padding: 20px;
+  display: flex;
 }
 
-.tweetBoxInput{
-  display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
-}
-
-.tweetBoxInput *{
-  margin: 5px 0;
-}
-
-.tweetBoxInput input{
+.tweetBoxInput input {
+  flex: 1;
+  margin-left: 20px;
   font-size: 20px;
   border: none;
 }
@@ -35,8 +29,11 @@
   text-transform: inherit !important;
   border-radius: 30px !important;
   height: 50px !important;
+  margin-top: 20px !important;
+  margin-left: auto !important;
 }
 
-.tweetBoxButton span{
-  padding: 0px 20px !important;
+.tweetBoxInputImage {
+  border: none;
+  padding: 10px;
 }
