@@ -4,17 +4,15 @@ import "./Feed.css";
 
 import TweetBox from "../TweetBox/TweetBox";
 import Post from "../Post/Post";
-import Widget from "../Widget/Widget";
 import db from "../../firebase";
-
-import AvatarIcon from "../../Icons/Profile-Avatar-PNG.png";
+import FlipMove from "react-flip-move";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     db.collection("posts").onSnapshot((snapshot) => {
-      setPosts(snapshot.docs.map((doc) => doc.data()));
+      setPosts(snapshot.docs.map((doc) => [doc.data(), doc.id]));
     });
   }, []);
 
@@ -26,16 +24,19 @@ const Feed = () => {
 
       <TweetBox />
 
-      {posts.map((post) => (
-        <Post
-          displayName={post.displayName}
-          userName={post.userName}
-          verified={post.verified}
-          text={post.text}
-          avatar={post.avatar}
-          image={post.image}
-        />
-      ))}
+      <FlipMove>
+        {posts.map((post) => (
+          <Post
+            key={post[1]}
+            displayName={post[0].displayName}
+            userName={post[0].userName}
+            verified={post[0].verified}
+            text={post[0].text}
+            avatar={post[0].avatar}
+            image={post[0].image}
+          />
+        ))}
+      </FlipMove>
     </div>
   );
 };
